@@ -1,0 +1,28 @@
+import random
+
+def total(nomarat):
+    s = sum(nomarat)
+    return s
+
+def average(nomarat):
+    a = total(nomarat) / 8
+    return a
+
+dars  = random.sample(range(1000, 10000), 8)
+
+daneshjo = random.sample(range(10000000, 100000000), 100)
+
+print("shomare daneshjo", dars, "Total", "Average")
+
+for student in daneshjo:
+
+    nomarat = []
+
+    for i in range(8):
+        nomre = round(random.uniform(0, 20), 2)
+        nomarat.append(nomre)
+
+    s = total(nomarat)
+    a = round(average(nomarat), 2)
+
+    print(student, nomarat, s, a)
